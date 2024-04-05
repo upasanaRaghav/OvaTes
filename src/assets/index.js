@@ -42,6 +42,9 @@ import tripguide from "./tripguide.png";
 import wewatch from "./wewatch.png";
 import threeJS from "./threeJS.png";
 import chatbot from "./chatbot.png";
+import chat from "./chat.png";
+import period from "./period.png";
+
 
 export {
   logo,
@@ -49,6 +52,8 @@ export {
   creator,
   mobile,
   web,
+  chat,
+  period,
   github,
   menu,
   close,
