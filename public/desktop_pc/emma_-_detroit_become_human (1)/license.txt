@@ -1,0 +1,8 @@
+Model Information:
+* title:	Emma - Detroit Become Human
+* source:	https://sketchfab.com/3d-models/emma-detroit-become-human-c7ea72ebdd02478eb6bfe176f55886a4
+* author:	Q.SARDOR (https://sketchfab.com/qsardor57913)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

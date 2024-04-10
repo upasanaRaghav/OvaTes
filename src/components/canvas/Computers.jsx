@@ -4,11 +4,10 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/dress/scene.gltf");
+const Computers = () => {
+  const computer = useGLTF("./desktop_pc/emma_-_detroit_become_human (1)/scene.gltf");
 
-  // Define the scale factor for mobile and non-mobile devices
-  const scale = isMobile ? 0.1 : 0.2; // Adjust the scale as needed for mobile
+  const scale = 4.2;
 
   return (
     <mesh>
@@ -24,8 +23,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={[scale, scale, scale]} // Apply the scale
-        position={[0, -3, -2.2]} // You can adjust the position as needed
+        scale={[scale, scale, scale]}
+        position={[0, -3, -2.2]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -36,21 +35,15 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 768px)");
-
-    // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
 
-    // Define a callback function to handle changes to the media query
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
     };
 
-    // Add the callback function as a listener for changes to the media query
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
-    // Remove the listener when the component is unmounted
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
@@ -67,10 +60,11 @@ const ComputersCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
+          enablePan={false} // Disable panning to restrict movement to rotation
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile} />
+        <Computers />
       </Suspense>
 
       <Preload all />

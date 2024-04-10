@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
-
+// import emailjs from "@emailjs/browser";
+import emailjs from "emailjs-com";
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
@@ -37,7 +37,7 @@ const Contact = () => {
         {
           from_name: form.name,
           to_name: "Upasana Raghav",
-          from_email: form.email,
+          email: form.email,
           to_email: "upasanaraghav31@gmail.com",
           message: form.message,
         },
@@ -46,7 +46,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          alert("Thank you. OvaTes will get back to you as soon as possible.");
 
           setForm({
             name: "",

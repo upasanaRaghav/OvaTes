@@ -14,6 +14,7 @@ import {
   mongodb,
   git,
   figma,
+  guide,
   docker,
   meta,
   starbucks,
@@ -27,6 +28,10 @@ import {
   webdev,
   workhome,
   chatgpt,
+  empowering,
+  sexeducation,
+  medicalhistory,
+  banner,
   c,
   coding,
   bootstrap,
@@ -54,7 +59,7 @@ export const navLinks = [
     title: "Improvements",
   },
   {
-    title: "Chat AI",
+    title: "Period Chat-Bot",
     link:"https://6606bb03e4397fafa5681922--glittery-eclair-ae4ff1.netlify.app/"
   },
   {
@@ -77,7 +82,7 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Chat AI",
+    title: "Period Chat-Bot",
     icon: backend,
   },
   {
@@ -146,7 +151,7 @@ const experiences = [
   {
     "title": "Conducted Webinars",
     "company_name": "Vasant kunj,Delhi",
-    "icon": ai,
+    "icon": sexeducation,
     "iconBg": "#E6DEDD",
     "date": "Every Weekend",
     "points": [
@@ -170,7 +175,7 @@ const experiences = [
   {
     "title": "Events",
     "company_name": "Virtual Meet",
-    "icon": workhome,
+    "icon": banner,
     "iconBg": "#E6DEDD",
     "date": "Monthly",
     "points": [
@@ -188,9 +193,9 @@ const education = [
   {
     title: "Empowering Sexuality Platform ",
     company_name: "",
-    icon: cse,
+    icon: empowering,
     iconBg: "#E6DEDD",
-    "date": "Ongoing",
+    "date": "",
     "points": [
       "Offered age-wise consultancy for individuals seeking guidance on sexual health matters at different stages of life.",
     ]
@@ -199,9 +204,9 @@ const education = [
   {
     title: "Your Guide to Sexual Health",
     company_name: "",
-    icon: twelth,
+    icon: guide,
     iconBg: "#383E56",
-    date: "Ongoing",
+    date: "",
     points: [
       "Developed a period tracker chatbot for seamless tracking of menstrual cycles and related health information.",
 
@@ -210,9 +215,9 @@ const education = [
   {
     title: "Empowering Sexuality Platform ",
     company_name: "",
-    icon: tenth,
+    icon: medicalhistory,
     iconBg: "#383E56",
-    date: "April 2017 - March 2018",
+    date: "",
     points: [
       "Provided a comprehensive one-stop solution for all sexual education-related queries and issues."
     ],

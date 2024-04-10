@@ -18,7 +18,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-auto h-8 object-contain" />
+<img src={logo} alt="logo" style={{ width: "100px" }} className="h-8 object-contain" />
         </Link>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">

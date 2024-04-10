@@ -80,8 +80,8 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-       My projects showcase real-world skills through practical applications. Ovate, a single platform, demonstrates my versatility. It integrates a user-friendly period tracker for cycle management, an AI-powered recommendation app for personalized discovery, and a robust ChatAI utilizing AI to answer educational inquiries. This comprehensive platform highlights my expertise in building full-stack applications.
-        </motion.p>
+Our Platform highlight real-world skills through practical applications. Ovates, a unified platform, showcases our versatility. It incorporates a user-friendly period tracker for cycle management, an AI-powered recommendation app for personalized discovery, and a robust ChatAI utilizing AI to address educational inquiries. This comprehensive platform underscores our expertise in building full-stack applications.
+ </motion.p>
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">

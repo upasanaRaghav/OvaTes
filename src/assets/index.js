@@ -1,4 +1,4 @@
-import logo from "./lo.png";
+import logo from "./yes.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -44,9 +44,21 @@ import threeJS from "./threeJS.png";
 import chatbot from "./chatbot.png";
 import chat from "./chat.png";
 import period from "./period.png";
+import empowering from "./empowering.png";
+import sexeducation from "./sex-education.png";
+import medicalhistory from "./medical-history.png";
+import banner from "./banner.png";
+import guide from "./guide.png";
+
+
 
 
 export {
+  empowering,
+  guide,
+  sexeducation,
+  medicalhistory,
+  banner,
   logo,
   backend,
   creator,
