@@ -1,0 +1,25 @@
+name: Auto Update Demo File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Create/Update a File
+        run: echo "This file was updated on $(date)" > demo.txt
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add demo.txt
+          git commit -m "Auto-updated demo.txt [skip ci]" || echo "No changes to commit"
+          git push
