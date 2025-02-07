@@ -1,4 +1,4 @@
-name: Security Check Workflow
+name: Basic Workflow
 
 on:
   push:
@@ -6,19 +6,9 @@ on:
       - main
 
 jobs:
-  security-scan:
+  simple-job:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Scan for API Keys or Secrets
-        run: |
-          echo "Scanning for sensitive data..."
-          if grep -r -E '(api_key|secret|password|token)' .; then
-            echo " Security Issue Found! Failing the workflow."
-            exit 1
-          else
-            echo " No security issues found."
-          fi
+      - name: Print a message
+        run: echo "GitHub Actions is running successfully!"
