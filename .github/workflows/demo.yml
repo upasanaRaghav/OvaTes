@@ -1,4 +1,4 @@
-name: Demo File Update
+name: Security Check Workflow
 
 on:
   push:
@@ -6,24 +6,19 @@ on:
       - main
 
 jobs:
-  update-file:
+  security-scan:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create/Update a File
-        run: echo "This file was updated on $(date)" > demo.txt
-
-      - name: Commit and Push Changes
+      - name: Scan for API Keys or Secrets
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add demo.txt
-          git commit -m "Auto-updated demo.txt [skip ci]" || echo "No changes to commit"
-          git push origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          echo "Scanning for sensitive data..."
+          if grep -r -E '(api_key|secret|password|token)' .; then
+            echo " Security Issue Found! Failing the workflow."
+            exit 1
+          else
+            echo " No security issues found."
+          fi
